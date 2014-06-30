@@ -8,6 +8,7 @@
 
 int main() {
    
+   /*...*/
 
    printf("\n\tTHE END.\n");
    system("pause");

@@ -17,13 +17,6 @@ Element::Element (/*Geometry:*/ dbl length, dbl width, dbl height,
    }
 }
 
-//Element::Element() { //C-tor by def. //добавлял только д/наследования, но пока обошёлся
-//   Geom.l = Geom.w = Geom.h = 0;
-//   Phys.m = 0;
-//   Phys.cm = *(new Point(0, 0, 0));
-//   couplAx = nullptr;
-//}
-
 Element::~Element() {
    delete couplAx_;
 }

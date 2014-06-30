@@ -2,8 +2,7 @@
 #define TYPEDEFINITIONS_H
 
 
-//#include "TriCoord.h"
-class TriCoord;
+struct TriCoord;
 
 
 typedef double dbl;

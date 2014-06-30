@@ -1,1 +1,9 @@
-﻿  HumanoidControlSystem.vcxproj -> E:\_Мои_документы\__Мое Дело\GameDev\_CPP\_CPP Projects\Humanoid\HumanoidControlSystem\Debug\HumanoidControlSystem.exe
+﻿  Element.cpp
+  Создание кода...
+  Компиляция...
+  main.cpp
+c:\users\sashka\documents\github\humanoidcontrolsystem\humanoidcontrolsystem\connection.h(48): warning C4512: Connection: не удается создать оператор присваивания
+          c:\users\sashka\documents\github\humanoidcontrolsystem\humanoidcontrolsystem\connection.h(30): см. объявление "Connection"
+  MacroElem.cpp
+  Создание кода...
+  HumanoidControlSystem.vcxproj -> C:\Users\SaShka\Documents\GitHub\HumanoidControlSystem\Debug\HumanoidControlSystem.exe

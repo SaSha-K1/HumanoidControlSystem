@@ -14,13 +14,6 @@ struct MECouplingAxis;
 class MacroElem : public Element {
 public:
    MacroElem(Element* pEl0);
-      //dbl x, dbl y, dbl z,    //<- TriCoord   //DEL! не нужно, т.к. в C-tor передаётся только базовый эл-т ("относит. полож-е" не имеет смысла)
-      //dbl a, dbl b, dbl g);   //<- TriAngles
-
-   //MacroElem(void) {};
-   //MacroElem(Element* el0 = nullptr,
-   //   dbl x = 0.0, dbl y = 0.0, dbl z = 0.0,    //<- TriCoord
-   //   dbl a = 0.0, dbl b = 0.0, dbl g = 0.0);   //<- TriAngles
    ~MacroElem();
    void addElem(Element*);
 
@@ -35,8 +28,8 @@ private:
 
 
 // STRUCTures:
-struct TriAngles {   // использую как структуру из 3 углов Эйлера (д/ определения положения в простр-ве). Не использую `TriCoord`, ..
-   //.. чтобы не путаться из-за имён переменных, которые там названы x, y, z.
+struct TriAngles {      // использую как структуру из 3 углов Эйлера (д/ определения положения в простр-ве). Не использую `TriCoord`, ..
+                        //.. чтобы не путаться из-за имён переменных, которые там названы x, y, z.
    double a = 0;   //
    double b = 0;   // - углы Эйлера
    double g = 0;   //
@@ -48,8 +41,8 @@ struct RelativePosition {                 ///@@@ почитать о "Кватернионы и враще
    TriAngles triAngs;
    
    RelativePosition(dbl x, dbl y, dbl z, dbl a, dbl b, dbl g) 
-      /*: localOriginCoords.x(x), localOriginCoords.y(y), localOriginCoords.z(z),*/  ///@@@ возможно в списке иниц-ции C-tor'а нельзя ...
-      /*triAngs.a(a), triAngs.b(b), triAngs.g(g) {}*/                                   ///... обращаться к полям вложенных кл./struct'ур.
+      /*: localOriginCoords.x(x), localOriginCoords.y(y), localOriginCoords.z(z),*/  ///@@@ возможно в списке иниц-ции C-tor'а нельзя ..
+      /*triAngs.a(a), triAngs.b(b), triAngs.g(g) {}*/                                ///.. обращаться к полям вложенных кл./struct'ур.
    {
       localOriginCoords.x = x;
       localOriginCoords.y = y;

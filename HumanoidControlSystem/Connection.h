@@ -3,7 +3,6 @@
 
 
 #include "includes.h"
-//#include "Element.h"
 
 
 struct Amplitude;
@@ -46,8 +45,6 @@ private:
    dbl currentAngle_ = 0;     // - тек.знач-е угла
    EngineParametres engParams_;  // - параметры серво
    Amplitude ampl_;// = engParams_.ampl;  // - крайние положения соединения (чаще будут == амплитуде серво, но не обязательно (конструкция))
-
-   //Position CurrentPos; // - полож-е соединения в пространстве ///?нужно ли тут - скорее всего вынесу на уровень Кинем.Цепи или вообще во внешн. ф-цию 
 };
 
 struct ConstituentMacroElemData {
@@ -57,10 +54,6 @@ struct ConstituentMacroElemData {
                               //.. позволяющую однозначно определить соединение в пространстве.
 };
 
-
-
-//ConList   //?X
-//MacroElem* connectedTo = nullptr; //?X
 
 
 #endif   //CONNECTION_H
