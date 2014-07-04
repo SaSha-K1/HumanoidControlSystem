@@ -30,6 +30,7 @@ public:
             /*CouplingAxis:*/ std::vector<CouplingAxis> *couplAxPtr);   // чтобы не плодить min 2 C-tor'а с кучей парам-ров, решил ..
                                                                         //.. cre-ть `vector<CouplingAxis>` отдельно и передавать в ..
                                                                         //.. C-tor ptr на него.
+   //Element();  //добавлял д/наследования, но пока обошёлся
    ~Element();
    ///@@@ Возможно понадобится ещё Copy C-tor и оператор `=` из-за того, что поле `couplAx` содержит ptr, а не obj.
 
@@ -53,6 +54,8 @@ public:
                                           //.. вроде как bad practice). Посмотрим ... НЕ получилось.
    uns getCouplAxSize() const;
    
+   // Вроде как удобнее было бы создать копию obj'та `CouplingAxis` отдать C-tor'у `MacroElem`. А тот просто слизал бы инфу и удалил, ..
+   //.. НО это вроде ваще негуд, что `new` в одном методе, а `delete` в другом (причём ещё и разных классов). Поэтому создаю стековый obj:
    CouplingAxis getCouplAx(uns noea) const;
 
 
